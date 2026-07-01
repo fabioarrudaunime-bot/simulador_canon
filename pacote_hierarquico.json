@@ -1,0 +1,139 @@
+{
+  "root_dir": "C:\\Users\\fa-tj\\Desktop\\Simulador WEB e conversores\\Simuladores WEB\\CANON",
+  "root_main": "Simulador.pptx",
+  "arquivos": [
+    {
+      "arquivo": "Abdome - Toshiba (Canon).pptx",
+      "saida": "abdome_toshiba_canon",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "ATM - Toshiba (Canon) 1.pptx",
+      "saida": "atm_toshiba_canon_1",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "C. Torácica - Toshiba (Canon) 1.pptx",
+      "saida": "c_toracica_toshiba_canon_1",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "Cervical - Toshiba (Canon) 1.pptx",
+      "saida": "cervical_toshiba_canon_1",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "Cotovelo - Toshiba (Canon) 1.pptx",
+      "saida": "cotovelo_toshiba_canon_1",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "CRANIO - Toshiba (Canon) 1.pptx",
+      "saida": "cranio_toshiba_canon_1",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "Face - Toshiba (Canon) 1.pptx",
+      "saida": "face_toshiba_canon_1",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "Hipófise, Sela Turca - Toshiba (Canon) 1.pptx",
+      "saida": "hipofise_sela_turca_toshiba_canon_1",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "Joelho - Toshiba (Canon) 1.pptx",
+      "saida": "joelho_toshiba_canon_1",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "Mastoide - Toshiba (Canon) 1.pptx",
+      "saida": "mastoide_toshiba_canon_1",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "Ombro - Toshiba (Canon).pptx",
+      "saida": "ombro_toshiba_canon",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "Pescoço - Toshiba (Canon) 1.pptx",
+      "saida": "pescoco_toshiba_canon_1",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "Punho ou mão - Toshiba (Canon).pptx",
+      "saida": "punho_ou_mao_toshiba_canon",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "Pé - Toshiba (Canon) 1.pptx",
+      "saida": "pe_toshiba_canon_1",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "Seios da face - Toshiba (Canon) 1.pptx",
+      "saida": "seios_da_face_toshiba_canon_1",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "Tórax - Toshiba (Canon) 1.pptx",
+      "saida": "torax_toshiba_canon_1",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "Órbitas - Toshiba (Canon) 1.pptx",
+      "saida": "orbitas_toshiba_canon_1",
+      "tipo": "aula",
+      "menu_url": "../index.html",
+      "portal_url": "../index.html"
+    },
+    {
+      "arquivo": "Simulador.pptx",
+      "saida": ".",
+      "tipo": "root_main",
+      "menu_url": "index.html",
+      "portal_url": "index.html"
+    }
+  ],
+  "mains_detectados": [
+    {
+      "pasta": ".",
+      "main": "Simulador.pptx"
+    }
+  ],
+  "falhas": []
+}

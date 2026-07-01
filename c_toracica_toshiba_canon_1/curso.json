@@ -1,0 +1,906 @@
+{
+  "titulo": "C. Torácica - Toshiba (Canon) 1",
+  "largura": 1920,
+  "altura": 1080,
+  "slide_inicial": "slide001",
+  "menu_url": "../index.html",
+  "portal_url": "../index.html",
+  "slides": {
+    "slide001": {
+      "imagem": "slides/slide001.webp",
+      "tempo": 0,
+      "proximo": "slide002",
+      "botoes": [
+        {
+          "x": 11,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 309,
+          "y": 646,
+          "largura": 76,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 10,
+          "y": 688,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 10,
+          "y": 730,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 1232,
+          "y": 968,
+          "largura": 138,
+          "altura": 49,
+          "destino": "slide004"
+        },
+        {
+          "x": 1551,
+          "y": 949,
+          "largura": 257,
+          "altura": 76,
+          "destino_url": "../index.html"
+        },
+        {
+          "x": 0,
+          "y": 688,
+          "largura": 498,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 8,
+          "y": 737,
+          "largura": 498,
+          "altura": 42,
+          "destino": "slide003"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    },
+    "slide002": {
+      "imagem": "slides/slide002.webp",
+      "tempo": 0,
+      "proximo": "slide003",
+      "botoes": [
+        {
+          "x": 11,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide001"
+        },
+        {
+          "x": 10,
+          "y": 688,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide001"
+        },
+        {
+          "x": 10,
+          "y": 730,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 1232,
+          "y": 968,
+          "largura": 138,
+          "altura": 49,
+          "destino": "slide004"
+        },
+        {
+          "x": 1551,
+          "y": 949,
+          "largura": 257,
+          "altura": 76,
+          "destino_url": "../index.html"
+        },
+        {
+          "x": 0,
+          "y": 649,
+          "largura": 498,
+          "altura": 42,
+          "destino": "slide001"
+        },
+        {
+          "x": 8,
+          "y": 737,
+          "largura": 498,
+          "altura": 42,
+          "destino": "slide003"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    },
+    "slide003": {
+      "imagem": "slides/slide003.webp",
+      "tempo": 0,
+      "proximo": "slide004",
+      "botoes": [
+        {
+          "x": 11,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide001"
+        },
+        {
+          "x": 309,
+          "y": 646,
+          "largura": 76,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 10,
+          "y": 688,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 10,
+          "y": 730,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 1232,
+          "y": 968,
+          "largura": 138,
+          "altura": 49,
+          "destino": "slide004"
+        },
+        {
+          "x": 1551,
+          "y": 949,
+          "largura": 257,
+          "altura": 76,
+          "destino_url": "../index.html"
+        },
+        {
+          "x": 0,
+          "y": 688,
+          "largura": 498,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 8,
+          "y": 646,
+          "largura": 498,
+          "altura": 42,
+          "destino": "slide001"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    },
+    "slide004": {
+      "imagem": "slides/slide004.webp",
+      "tempo": 3.0,
+      "proximo": "slide005",
+      "botoes": [
+        {
+          "x": 11,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 309,
+          "y": 646,
+          "largura": 76,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 10,
+          "y": 688,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 10,
+          "y": 730,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 1551,
+          "y": 949,
+          "largura": 257,
+          "altura": 76,
+          "destino_url": "../index.html"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    },
+    "slide005": {
+      "imagem": "slides/slide005.webp",
+      "tempo": 0,
+      "proximo": "slide006",
+      "botoes": [
+        {
+          "x": 11,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 309,
+          "y": 646,
+          "largura": 76,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 10,
+          "y": 688,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 10,
+          "y": 730,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 1429,
+          "y": 342,
+          "largura": 382,
+          "altura": 214,
+          "destino": "slide006"
+        },
+        {
+          "x": 1551,
+          "y": 949,
+          "largura": 257,
+          "altura": 76,
+          "destino_url": "../index.html"
+        }
+      ],
+      "gifs": [
+        {
+          "arquivo": "assets/image14.gif",
+          "x": 1429,
+          "y": 342,
+          "largura": 382,
+          "altura": 214
+        }
+      ],
+      "audio": null
+    },
+    "slide006": {
+      "imagem": "slides/slide006.webp",
+      "tempo": 0,
+      "proximo": "slide007",
+      "botoes": [
+        {
+          "x": 1432,
+          "y": 346,
+          "largura": 378,
+          "altura": 208,
+          "destino": "slide007"
+        },
+        {
+          "x": 11,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 309,
+          "y": 646,
+          "largura": 76,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 10,
+          "y": 688,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 10,
+          "y": 730,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 1551,
+          "y": 949,
+          "largura": 257,
+          "altura": 76,
+          "destino_url": "../index.html"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    },
+    "slide007": {
+      "imagem": "slides/slide007.webp",
+      "tempo": 1.0,
+      "proximo": "slide008",
+      "botoes": [
+        {
+          "x": 11,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 309,
+          "y": 646,
+          "largura": 76,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 10,
+          "y": 688,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 10,
+          "y": 730,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 658,
+          "y": 540,
+          "largura": 121,
+          "altura": 26,
+          "destino": "slide002"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    },
+    "slide008": {
+      "imagem": "slides/slide008.webp",
+      "tempo": 2.7,
+      "proximo": "slide009",
+      "botoes": [
+        {
+          "x": 11,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 309,
+          "y": 646,
+          "largura": 76,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 10,
+          "y": 688,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 10,
+          "y": 730,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 658,
+          "y": 540,
+          "largura": 121,
+          "altura": 26,
+          "destino": "slide002"
+        }
+      ],
+      "gifs": [
+        {
+          "arquivo": "assets/image17.gif",
+          "x": 843,
+          "y": 22,
+          "largura": 546,
+          "altura": 463
+        }
+      ],
+      "audio": null
+    },
+    "slide009": {
+      "imagem": "slides/slide009.webp",
+      "tempo": 1.0,
+      "proximo": "slide010",
+      "botoes": [
+        {
+          "x": 11,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 309,
+          "y": 646,
+          "largura": 76,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 10,
+          "y": 688,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 10,
+          "y": 730,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 658,
+          "y": 540,
+          "largura": 121,
+          "altura": 26,
+          "destino": "slide002"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    },
+    "slide010": {
+      "imagem": "slides/slide010.webp",
+      "tempo": 2.0,
+      "proximo": "slide011",
+      "botoes": [
+        {
+          "x": 10,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 10,
+          "y": 688,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 658,
+          "y": 540,
+          "largura": 121,
+          "altura": 26,
+          "destino": "slide002"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    },
+    "slide011": {
+      "imagem": "slides/slide011.webp",
+      "tempo": 2.7,
+      "proximo": "slide012",
+      "botoes": [
+        {
+          "x": 10,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 10,
+          "y": 688,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        }
+      ],
+      "gifs": [
+        {
+          "arquivo": "assets/image19.gif",
+          "x": 842,
+          "y": 26,
+          "largura": 553,
+          "altura": 450
+        }
+      ],
+      "audio": null
+    },
+    "slide012": {
+      "imagem": "slides/slide012.webp",
+      "tempo": 1.0,
+      "proximo": "slide013",
+      "botoes": [
+        {
+          "x": 10,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide002"
+        },
+        {
+          "x": 10,
+          "y": 688,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    },
+    "slide013": {
+      "imagem": "slides/slide013.webp",
+      "tempo": 1.0,
+      "proximo": "slide014",
+      "botoes": [],
+      "gifs": [],
+      "audio": null
+    },
+    "slide014": {
+      "imagem": "slides/slide014.webp",
+      "tempo": 1.0,
+      "proximo": "slide015",
+      "botoes": [],
+      "gifs": [],
+      "audio": null
+    },
+    "slide015": {
+      "imagem": "slides/slide015.webp",
+      "tempo": 0,
+      "proximo": "slide016",
+      "botoes": [
+        {
+          "x": 446,
+          "y": 28,
+          "largura": 242,
+          "altura": 325,
+          "destino": "slide016"
+        },
+        {
+          "x": 430,
+          "y": 361,
+          "largura": 32,
+          "altura": 10,
+          "destino": "slide016"
+        },
+        {
+          "x": 674,
+          "y": 362,
+          "largura": 32,
+          "altura": 10,
+          "destino": "slide016"
+        },
+        {
+          "x": 880,
+          "y": 188,
+          "largura": 279,
+          "altura": 333,
+          "destino": "slide016"
+        },
+        {
+          "x": 1186,
+          "y": 211,
+          "largura": 32,
+          "altura": 10,
+          "destino": "slide016"
+        },
+        {
+          "x": 1186,
+          "y": 489,
+          "largura": 32,
+          "altura": 10,
+          "destino": "slide016"
+        },
+        {
+          "x": 1551,
+          "y": 949,
+          "largura": 257,
+          "altura": 76,
+          "destino_url": "../index.html"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    },
+    "slide016": {
+      "imagem": "slides/slide016.webp",
+      "tempo": 0,
+      "proximo": "slide017",
+      "botoes": [
+        {
+          "x": 446,
+          "y": 28,
+          "largura": 242,
+          "altura": 360,
+          "destino": "slide017"
+        },
+        {
+          "x": 430,
+          "y": 398,
+          "largura": 32,
+          "altura": 10,
+          "destino": "slide017"
+        },
+        {
+          "x": 674,
+          "y": 398,
+          "largura": 32,
+          "altura": 10,
+          "destino": "slide017"
+        },
+        {
+          "x": 896,
+          "y": 172,
+          "largura": 279,
+          "altura": 365,
+          "destino": "slide017"
+        },
+        {
+          "x": 1215,
+          "y": 211,
+          "largura": 32,
+          "altura": 10,
+          "destino": "slide017"
+        },
+        {
+          "x": 1215,
+          "y": 489,
+          "largura": 32,
+          "altura": 10,
+          "destino": "slide017"
+        },
+        {
+          "x": 1551,
+          "y": 949,
+          "largura": 257,
+          "altura": 76,
+          "destino_url": "../index.html"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    },
+    "slide017": {
+      "imagem": "slides/slide017.webp",
+      "tempo": 0,
+      "proximo": "slide018",
+      "botoes": [
+        {
+          "x": 1232,
+          "y": 968,
+          "largura": 138,
+          "altura": 49,
+          "destino": "slide018"
+        },
+        {
+          "x": 1551,
+          "y": 949,
+          "largura": 257,
+          "altura": 76,
+          "destino_url": "../index.html"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    },
+    "slide018": {
+      "imagem": "slides/slide018.webp",
+      "tempo": 2.0,
+      "proximo": "slide019",
+      "botoes": [
+        {
+          "x": 12,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 1551,
+          "y": 949,
+          "largura": 257,
+          "altura": 76,
+          "destino_url": "../index.html"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    },
+    "slide019": {
+      "imagem": "slides/slide019.webp",
+      "tempo": 0,
+      "proximo": "slide020",
+      "botoes": [
+        {
+          "x": 12,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 1429,
+          "y": 342,
+          "largura": 382,
+          "altura": 214,
+          "destino": "slide020"
+        },
+        {
+          "x": 1551,
+          "y": 949,
+          "largura": 257,
+          "altura": 76,
+          "destino_url": "../index.html"
+        }
+      ],
+      "gifs": [
+        {
+          "arquivo": "assets/image14.gif",
+          "x": 1429,
+          "y": 342,
+          "largura": 382,
+          "altura": 214
+        }
+      ],
+      "audio": null
+    },
+    "slide020": {
+      "imagem": "slides/slide020.webp",
+      "tempo": 0,
+      "proximo": "slide021",
+      "botoes": [
+        {
+          "x": 12,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 1432,
+          "y": 346,
+          "largura": 378,
+          "altura": 208,
+          "destino": "slide021"
+        },
+        {
+          "x": 1551,
+          "y": 949,
+          "largura": 257,
+          "altura": 76,
+          "destino_url": "../index.html"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    },
+    "slide021": {
+      "imagem": "slides/slide021.webp",
+      "tempo": 2.0,
+      "proximo": "slide022",
+      "botoes": [
+        {
+          "x": 12,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    },
+    "slide022": {
+      "imagem": "slides/slide022.webp",
+      "tempo": 9.5,
+      "proximo": "slide023",
+      "botoes": [
+        {
+          "x": 12,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        }
+      ],
+      "gifs": [
+        {
+          "arquivo": "assets/image26.gif",
+          "x": 296,
+          "y": 9,
+          "largura": 514,
+          "altura": 486
+        },
+        {
+          "arquivo": "assets/image27.gif",
+          "x": 875,
+          "y": 27,
+          "largura": 481,
+          "altura": 484
+        },
+        {
+          "arquivo": "assets/image29.gif",
+          "x": 1468,
+          "y": 33,
+          "largura": 422,
+          "altura": 291
+        }
+      ],
+      "audio": null
+    },
+    "slide023": {
+      "imagem": "slides/slide023.webp",
+      "tempo": 0,
+      "proximo": null,
+      "botoes": [
+        {
+          "x": 12,
+          "y": 646,
+          "largura": 36,
+          "altura": 42,
+          "destino": "slide003"
+        },
+        {
+          "x": 1187,
+          "y": 1024,
+          "largura": 91,
+          "altura": 56,
+          "destino": "slide002"
+        },
+        {
+          "x": 1551,
+          "y": 949,
+          "largura": 257,
+          "altura": 76,
+          "destino_url": "../index.html"
+        }
+      ],
+      "gifs": [],
+      "audio": null
+    }
+  }
+}

@@ -156,8 +156,34 @@ function voltarPortal() {
     window.location.href = (curso && curso.portal_url) ? curso.portal_url : "index.html";
 }
 
-window.addEventListener("resize", () => {
-    if (slideAtual) abrirSlide(slideAtual, false);
+function reajustarTelaMobile() {
+    if (!slideAtual) return;
+
+    setTimeout(() => {
+        if (slideAtual) abrirSlide(slideAtual, false);
+    }, 120);
+
+    setTimeout(() => {
+        if (slideAtual) abrirSlide(slideAtual, false);
+    }, 450);
+
+    setTimeout(() => {
+        if (slideAtual) abrirSlide(slideAtual, false);
+    }, 900);
+}
+
+window.addEventListener("load", reajustarTelaMobile);
+window.addEventListener("resize", reajustarTelaMobile);
+window.addEventListener("orientationchange", reajustarTelaMobile);
+window.addEventListener("pageshow", reajustarTelaMobile);
+
+if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", reajustarTelaMobile);
+    window.visualViewport.addEventListener("scroll", reajustarTelaMobile);
+}
+
+document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) reajustarTelaMobile();
 });
 
 document.addEventListener("keydown", e => {

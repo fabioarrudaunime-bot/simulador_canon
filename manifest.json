@@ -4,7 +4,7 @@
   "description": "Simulador interativo Expert Radiologia",
   "start_url": "./index.html",
   "scope": "./",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "landscape",
   "background_color": "#000000",
   "theme_color": "#000000",

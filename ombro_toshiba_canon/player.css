@@ -8,6 +8,12 @@ html, body {
     font-family: Arial, sans-serif;
     overscroll-behavior: none;
     touch-action: manipulation;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    position: fixed;
+    inset: 0;
 }
 
 #player {
@@ -16,30 +22,46 @@ html, body {
     width: 100vw;
     height: 100vh;
     height: 100dvh;
-    background: black;
+    height: var(--app-height, 100dvh);
+    background: #000;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 #slide-img {
     position: absolute;
-    max-width: 100vw;
-    max-height: 100vh;
-    max-height: 100dvh;
-    width: auto;
-    height: auto;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    height: var(--app-height, 100dvh);
+    object-fit: contain;
+    object-position: center center;
+    display: block;
     user-select: none;
     -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+#camada-gifs,
+#camada-botoes {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: var(--app-height, 100dvh);
+    pointer-events: none;
 }
 
 .overlay-gif,
 .botao-invisivel {
-    position: absolute;
+    position: fixed;
 }
 
 .overlay-gif {
     z-index: 5;
+    pointer-events: none;
 }
 
 .botao-invisivel {
@@ -47,6 +69,8 @@ html, body {
     border: none;
     cursor: pointer;
     z-index: 10;
+    pointer-events: auto;
+    padding: 0;
 }
 
 .botao-invisivel:hover {

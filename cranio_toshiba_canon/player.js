@@ -2,57 +2,71 @@ let curso = null;
 let slideAtual = null;
 let historico = [];
 let timer = null;
-let renderTimer = null;
 const cacheImagens = new Map();
 
-function alturaVisual() {
-    if (window.visualViewport && window.visualViewport.height) {
-        return window.visualViewport.height;
-    }
-    return window.innerHeight;
-}
-
-function definirAlturaApp() {
-    const h = alturaVisual();
-    document.documentElement.style.setProperty("--app-height", h + "px");
-}
-
-function esperarFrame() {
-    return new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-}
-
 async function carregarCurso() {
-    definirAlturaApp();
+    atualizarAlturaVisual();
     const resp = await fetch("curso.json?nocache=" + Date.now());
     curso = await resp.json();
     const params = new URLSearchParams(window.location.search);
-    await abrirSlide(params.get("slide") || curso.slide_inicial, false);
-    tentarTravarHorizontal();
+
+    requestAnimationFrame(() => {
+        abrirSlide(params.get("slide") || curso.slide_inicial, false);
+    });
 }
 
 function escalaInfo() {
     const img = document.getElementById("slide-img");
     const rect = img.getBoundingClientRect();
+
     return {
         left: rect.left,
         top: rect.top,
-        width: rect.width,
-        height: rect.height,
         scaleX: rect.width / curso.largura,
         scaleY: rect.height / curso.altura
     };
 }
 
 function posicionarElemento(el, item) {
+    el._pptItem = item;
+
     const e = escalaInfo();
+
     el.style.left = (e.left + item.x * e.scaleX) + "px";
     el.style.top = (e.top + item.y * e.scaleY) + "px";
     el.style.width = (item.largura * e.scaleX) + "px";
     el.style.height = (item.altura * e.scaleY) + "px";
 }
 
+function reposicionarElementos() {
+    if (!curso || !slideAtual) return;
+
+    document.querySelectorAll(".overlay-gif, .botao-invisivel").forEach(el => {
+        if (el._pptItem) posicionarElemento(el, el._pptItem);
+    });
+}
+
+function atualizarAlturaVisual() {
+    const altura = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+    if (altura && altura > 0) {
+        document.documentElement.style.setProperty("--app-height", altura + "px");
+    }
+}
+
+function reajustarTelaMobile() {
+    atualizarAlturaVisual();
+
+    requestAnimationFrame(() => {
+        reposicionarElementos();
+    });
+
+    setTimeout(reposicionarElementos, 120);
+    setTimeout(reposicionarElementos, 450);
+}
+
 function preloadArquivo(src) {
     if (!src || cacheImagens.has(src)) return;
+
     const img = new Image();
     img.src = src;
     cacheImagens.set(src, img);
@@ -60,14 +74,20 @@ function preloadArquivo(src) {
 
 function preloadSlide(id) {
     if (!curso || !curso.slides || !curso.slides[id]) return;
+
     const s = curso.slides[id];
     preloadArquivo(s.imagem);
-    if (s.gifs) s.gifs.forEach(g => preloadArquivo(g.arquivo));
+
+    if (s.gifs) {
+        s.gifs.forEach(g => preloadArquivo(g.arquivo));
+    }
 }
 
 function preloadProximos(s) {
     if (!s) return;
+
     if (s.proximo) preloadSlide(s.proximo);
+
     if (s.botoes) {
         s.botoes.forEach(b => {
             if (b.destino) preloadSlide(b.destino);
@@ -75,84 +95,60 @@ function preloadProximos(s) {
     }
 }
 
-function limparCamadas() {
-    document.getElementById("camada-gifs").innerHTML = "";
-    document.getElementById("camada-botoes").innerHTML = "";
-}
-
-async function renderizarCamadas() {
-    if (!curso || !slideAtual || !curso.slides[slideAtual]) return;
-
-    definirAlturaApp();
-    await esperarFrame();
-
-    const s = curso.slides[slideAtual];
-    const camadaGifs = document.getElementById("camada-gifs");
-    const camadaBotoes = document.getElementById("camada-botoes");
-
-    camadaGifs.innerHTML = "";
-    camadaBotoes.innerHTML = "";
-
-    if (s.gifs) {
-        s.gifs.forEach(g => {
-            const gif = document.createElement("img");
-            gif.src = g.arquivo + "?t=" + Date.now();
-            gif.className = "overlay-gif";
-            camadaGifs.appendChild(gif);
-            posicionarElemento(gif, g);
-        });
-    }
-
-    if (s.botoes) {
-        s.botoes.forEach(b => {
-            const btn = document.createElement("button");
-            btn.className = "botao-invisivel";
-            btn.title = b.destino_url || b.destino || "";
-            btn.onclick = () => {
-                if (b.destino_url) window.location.href = b.destino_url;
-                else if (b.destino) abrirSlide(b.destino);
-            };
-            camadaBotoes.appendChild(btn);
-            posicionarElemento(btn, b);
-        });
-    }
-
-    preloadProximos(s);
-}
-
-function agendarReajusteMobile() {
-    definirAlturaApp();
-    clearTimeout(renderTimer);
-    renderTimer = setTimeout(() => {
-        renderizarCamadas();
-    }, 80);
-    setTimeout(() => renderizarCamadas(), 250);
-    setTimeout(() => renderizarCamadas(), 700);
-}
-
-async function abrirSlide(id, salvarHistorico = true) {
+function abrirSlide(id, salvarHistorico = true) {
     if (!curso || !curso.slides[id]) {
         console.warn("Slide não encontrado:", id);
         return;
     }
 
-    if (slideAtual && salvarHistorico) historico.push(slideAtual);
+    if (slideAtual && salvarHistorico) {
+        historico.push(slideAtual);
+    }
+
     slideAtual = id;
     clearTimeout(timer);
 
     const s = curso.slides[id];
     const img = document.getElementById("slide-img");
+    const camadaGifs = document.getElementById("camada-gifs");
+    const camadaBotoes = document.getElementById("camada-botoes");
     const audio = document.getElementById("audio");
 
-    limparCamadas();
-    definirAlturaApp();
+    camadaGifs.innerHTML = "";
+    camadaBotoes.innerHTML = "";
 
-    img.onload = async () => {
-        definirAlturaApp();
-        await esperarFrame();
-        await renderizarCamadas();
-        setTimeout(() => renderizarCamadas(), 250);
-        setTimeout(() => renderizarCamadas(), 650);
+    img.onload = () => {
+        if (s.gifs) {
+            s.gifs.forEach(g => {
+                const gif = document.createElement("img");
+                gif.src = g.arquivo + "?t=" + Date.now();
+                gif.className = "overlay-gif";
+                camadaGifs.appendChild(gif);
+                posicionarElemento(gif, g);
+            });
+        }
+
+        if (s.botoes) {
+            s.botoes.forEach(b => {
+                const btn = document.createElement("button");
+                btn.className = "botao-invisivel";
+                btn.title = b.destino_url || b.destino || "";
+
+                btn.onclick = () => {
+                    if (b.destino_url) {
+                        window.location.href = b.destino_url;
+                    } else if (b.destino) {
+                        abrirSlide(b.destino);
+                    }
+                };
+
+                camadaBotoes.appendChild(btn);
+                posicionarElemento(btn, b);
+            });
+        }
+
+        preloadProximos(s);
+        reajustarTelaMobile();
     };
 
     img.src = s.imagem;
@@ -193,28 +189,18 @@ function voltarPortal() {
     window.location.href = (curso && curso.portal_url) ? curso.portal_url : "index.html";
 }
 
-function tentarTravarHorizontal() {
-    try {
-        if (screen.orientation && screen.orientation.lock) {
-            screen.orientation.lock("landscape").catch(() => {});
-        }
-    } catch (e) {}
-}
-
-window.addEventListener("load", agendarReajusteMobile);
-window.addEventListener("resize", agendarReajusteMobile);
-window.addEventListener("orientationchange", () => {
-    setTimeout(agendarReajusteMobile, 120);
-    setTimeout(agendarReajusteMobile, 500);
-});
+window.addEventListener("load", reajustarTelaMobile);
+window.addEventListener("resize", reajustarTelaMobile);
+window.addEventListener("orientationchange", reajustarTelaMobile);
+window.addEventListener("pageshow", reajustarTelaMobile);
 
 if (window.visualViewport) {
-    window.visualViewport.addEventListener("resize", agendarReajusteMobile);
-    window.visualViewport.addEventListener("scroll", agendarReajusteMobile);
+    window.visualViewport.addEventListener("resize", reajustarTelaMobile);
+    window.visualViewport.addEventListener("scroll", reajustarTelaMobile);
 }
 
 document.addEventListener("visibilitychange", () => {
-    if (!document.hidden) agendarReajusteMobile();
+    if (!document.hidden) reajustarTelaMobile();
 });
 
 document.addEventListener("keydown", e => {
